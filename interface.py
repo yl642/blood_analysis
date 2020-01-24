@@ -16,6 +16,13 @@ def LDL_analysis(LDL_level):
     elif 190 <= LDL_level:
         return 'Very high'
 
+def TOT_analysis(TOT_level):
+    if TOT_level < 200:
+        return 'Nromal'
+    elif 200 <= TOT_level <= 239:
+        return 'Borderline high'
+    elif 240 <= TOT_level:
+        return 'High'
 
 def cholesterol_analysis():
     print('Cholesterol Check')
@@ -25,6 +32,8 @@ def cholesterol_analysis():
         print(HDL_analysis(int(test_info[1])))
     elif test_info[0].strip() == 'LDL':
         print(LDL_analysis(int(test_info[1])))
+    elif test_info[0].strip() == 'TOT':
+        print(TOT_analysis(int(test_info[1])))
 
 def interface():
     while 1:
