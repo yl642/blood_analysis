@@ -18,7 +18,7 @@ def LDL_analysis(LDL_level):
 
 
 def cholesterol_analysis():
-    print('Cholesterol Analysis')
+    print('Cholesterol Check')
     HDLinput = input('Enter test result: ')
     test_info = HDLinput.split('=')
     if test_info[0].strip() == 'HDL':
