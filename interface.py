@@ -56,7 +56,7 @@ def save_info():
 def save_result(x, y, z):
     import json
     r = y + ' (' + z.strip() + ')'
-    file = open('info.json', 'w+') % 'r'
+    file = open('info.json', 'w+')  #'r'
     result_dict = json.load(file)
     #file.close()
     result_dict[x] = r
